@@ -1,0 +1,6 @@
+DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXTAUTH_SECRET=your_nextauth_secret
+JWT_SECRET=your_jwt_secret
+JWT_REFRESH_SECRET=your_jwt_refresh_secret
