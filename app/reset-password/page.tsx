@@ -26,7 +26,7 @@ export default function ResetPassword() {
   }
 
   return (
-    <form className="space-y-5" onSubmit={handleSubmit}>
+    <form className="space-y-5 bg-background text-foreground p-6 rounded-lg shadow-md max-w-md mx-auto mt-16" onSubmit={handleSubmit}>
       <h2 className="text-2xl font-bold">Reset Password</h2>
       {done ? (
         <div className="text-green-600">

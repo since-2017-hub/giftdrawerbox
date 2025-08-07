@@ -17,9 +17,9 @@ export default function ForgotPassword() {
     else setError("Could not send reset email.");
   }
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50 px-2">
+    <div className="flex items-center justify-center min-h-screen bg-background text-foreground px-2">
       <form
-        className="space-y-5 w-full max-w-md bg-white p-6 rounded-lg shadow-md"
+        className="space-y-5 w-full max-w-md bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
         onSubmit={handleSubmit}
       >
         <h2 className="text-2xl font-bold text-center">Forgot Password</h2>
