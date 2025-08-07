@@ -17,26 +17,36 @@ export default function ForgotPassword() {
     else setError("Could not send reset email.");
   }
   return (
-    <form className="space-y-5" onSubmit={handleSubmit}>
-      <h2 className="text-2xl font-bold">Forgot Password</h2>
-      {sent ? (
-        <div className="text-green-600">Reset link sent (if account exists).</div>
-      ) : (
-        <>
-          <input
-            className="w-full p-2 border rounded"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            type="email"
-          />
-          <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
-            Send Reset Link
-          </button>
-        </>
-      )}
-      {error && <div className="text-red-600">{error}</div>}
-    </form>
+    <div className="flex items-center justify-center min-h-screen bg-gray-50 px-2">
+      <form
+        className="space-y-5 w-full max-w-md bg-white p-6 rounded-lg shadow-md"
+        onSubmit={handleSubmit}
+      >
+        <h2 className="text-2xl font-bold text-center">Forgot Password</h2>
+        {sent ? (
+          <div className="text-green-600 text-center">Reset link sent (if account exists).</div>
+        ) : (
+          <>
+            <input
+              className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              type="email"
+            />
+            <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors">
+              Send Reset Link
+            </button>
+          </>
+        )}
+        {error && <div className="text-red-600 text-center">{error}</div>}
+        <div className="text-right">
+          <a className="text-blue-500 hover:underline" href="/login">
+            Back to Login
+          </a>
+        </div>
+      </form>
+    </div>
   );
 }
